@@ -1,4 +1,4 @@
-package com.okason.prontoshop.ui.productlist;
+package com.okason.prontoshop.ui.checkout;
 
 
 import android.os.Bundle;
@@ -12,10 +12,11 @@ import com.okason.prontoshop.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ProductFragment extends Fragment {
+public class CheckoutFragment extends Fragment {
 
+    private View mRootView;
 
-    public ProductFragment() {
+    public CheckoutFragment() {
         // Required empty public constructor
     }
 
@@ -24,7 +25,9 @@ public class ProductFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_product, container, false);
+        mRootView = inflater.inflate(R.layout.fragment_checkout, container, false);
+
+        return mRootView;
     }
 
 }
