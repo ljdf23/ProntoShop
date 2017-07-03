@@ -20,4 +20,6 @@
     <string name="product_description">Product Image</string>
     <string name="qty">qty</string>
     <string name="delete">delete</string>
+    <string name="dialog_title">Title</string>
+    <string name="no_item_found">No Item found in the cart</string>
 </resources>
