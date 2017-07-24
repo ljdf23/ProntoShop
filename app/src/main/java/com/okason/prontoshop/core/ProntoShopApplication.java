@@ -15,6 +15,9 @@ public class ProntoShopApplication extends Application {
     private static AppComponent appComponent;
     private static ProntoShopApplication instance = new ProntoShopApplication();
 
+    public static ProntoShopApplication getInstance() {
+        return instance;
+    }
 
     @Override
     public void onCreate() {
@@ -22,10 +25,12 @@ public class ProntoShopApplication extends Application {
         getAppComponent();
     }
 
-    private void getAppComponent() {
+    public AppComponent getAppComponent() {
         if (appComponent == null)
             appComponent = DaggerAppComponent.builder()
                     .appModule(new AppModule(this))
                     .build();
+
+        return appComponent;
     }
 }

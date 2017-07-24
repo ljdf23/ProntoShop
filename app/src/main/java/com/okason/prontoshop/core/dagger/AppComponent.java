@@ -2,6 +2,8 @@ package com.okason.prontoshop.core.dagger;
 
 import com.okason.prontoshop.common.MainActivity;
 import com.okason.prontoshop.common.ShoppingCart;
+import com.okason.prontoshop.ui.customerlist.CustomerPresenter;
+import com.okason.prontoshop.ui.productlist.ProductPresenter;
 
 import javax.inject.Singleton;
 
@@ -28,7 +30,9 @@ Used on an interface. This interface is used by Dagger 2
 )
 public interface AppComponent {
     void inject(MainActivity activity);
-
     void inject(ShoppingCart cart);
 
+    void inject(ProductPresenter presenter);
+
+    void inject(CustomerPresenter customerPresenter);
 }

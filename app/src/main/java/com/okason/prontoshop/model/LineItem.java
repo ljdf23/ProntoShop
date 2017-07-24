@@ -7,6 +7,11 @@ package com.okason.prontoshop.model;
 public class LineItem extends Product{
     private int quantity;
 
+    public LineItem(Product product, int qty) {
+        super(product);
+        this.setQuantity(qty);
+    }
+
     public int getQuantity() {
         return quantity;
     }
